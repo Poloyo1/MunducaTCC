@@ -1,0 +1,2824 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+.nunito-font {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 1000;
+    font-style: normal;
+  }
+
+*{
+    box-sizing: border-box;
+}
+
+/*Responsividade baseada nas telas dos dispositivos laptop: 1024px, tablet: 768px, mobileL: 425px, mobileM: 375px, mobileS: 320px*/
+
+body::-webkit-scrollbar {
+    width: 6px;  
+    height: 6px;             
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: transparent;       
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #F20519, #FFC000, #693FD2, #0476D9, #0ABF04);    
+    border-radius: 20px;       
+
+  }
+@media screen and (max-width: 1024px) {
+    h1.text{
+        font-size: 2em;
+    }
+    p.frase{
+        font-size: 1.8em;
+        padding-right: 1%;
+    }
+    p.text{
+        font-size: 2em;
+    }
+    div.container img.img_materias{
+        padding-left: 2%;
+    }
+  }
+
+@media screen and (max-width: 768px) {
+    h1.text{
+        font-size: 1.6em;
+        line-height: normal;
+        width: 99vw;
+    }
+    p.frase{
+        font-size: 10em;
+        margin-right: 1%;
+    }
+    p.text{
+        font-size: 1.4em;
+        line-height: normal;
+    }
+    div.container img.img_materias{
+        padding-left: 2%;
+    }
+    div.container button.text{
+        font-size: 1.4em;
+        width: 8.5rem;
+        height: 4rem;
+        margin-top: 10px;
+    }
+    div.waves{
+        padding-top: 30%;
+    }
+    button.comecar.text.iniciar{
+        width: 250px;
+    }
+    .wrap{
+        display: inline-flex;
+        flex-wrap: wrap;
+    }
+    .disciplina:hover{
+        display: flex;
+        align-items: center;
+        /* width: 100px;
+        height: 100px; */
+    }
+    .adicionar_desaparecer{
+        position: relative;
+        top: 620px;
+    }
+    .text-title{
+        position: relative;
+        font-size: 1.5em;
+        top: 615px;
+        margin-left: 27px !important;
+    }
+    #adicionarMateria{
+        max-width: 9em;
+    }
+    .pend_div{
+        /* display: flex; */
+        align-content: space-around;
+        flex-wrap: wrap;
+        overflow-y: auto;
+    }
+    .pend_div::-webkit-scrollbar {
+        width: 6px;  
+        height: 6px;             
+    }
+    .pend_div::-webkit-scrollbar-track {
+        background: transparent;       
+    }
+    .pend_div::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #F20519, #FFC000, #693FD2, #0476D9, #0ABF04);    
+    border-radius: 20px;       
+    }
+    .card{
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    .card::-webkit-scrollbar {
+        width: 6px;  
+        height: 6px;             
+    }
+    .card::-webkit-scrollbar-track {
+        background: transparent;       
+    }
+    .card::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #F20519, #FFC000, #693FD2, #0476D9, #0ABF04);    
+    border-radius: 20px;       
+    }
+    .attPT{
+        max-width: 110px;
+        max-height: 110px;
+        /* font-size: 3.5rem; */
+        background-color: #0078d7 !important;
+        margin-bottom: 0.2em;
+    }
+    .modal.modal-att{
+        height: 25%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        flex-direction: row-reverse;
+    }
+    .blocos{
+        padding-left: 0% !important;
+        padding-right: 0% !important;
+    }
+    .grupo-bloco img{
+        max-width: 55px;
+        max-height: 55px;
+    }
+    .bloco{
+        font-size: 29.5px !important;
+        width: 50px !important;
+        height: 100px !important;
+    }
+    .grupo-bloco{
+        margin-right: 0 !important;
+        margin-left: 0.5rem !important;
+        margin-top: 0.5rem ;
+        margin-bottom: 0 !important;
+    }
+    .modal-att .att {
+        font-size: 5em;
+    }
+}
+  
+@media screen and (max-width: 425px) {
+    h1.text{
+        font-size: 1.2em;
+
+    }
+    p.frase{
+        font-size: 1.6em;
+        margin-right: 1%;
+    }
+    p.text-div2{
+        font-size: 1.3em;
+    }
+    div.container img.img_materias{
+        padding-left: 2%;
+    }
+    div.container button.text{
+        font-size: 1.6em;
+        width: 10rem;
+        height: 4rem;
+        margin-top: 10px;
+    }
+    div.img-div img{
+        width: 20vw;
+        height: 18vh;
+    }
+
+    button.comecar{
+        font-size: 1.5em;
+        width: 60%;
+        height: 10%;
+    } 
+    div.munduca{
+       margin-top: 5px;
+    }
+    div.waves{
+        padding-top: 30%;
+    }
+    div.texto-recentes h1.disciplinasR{
+          font-size: 0.7em;  
+    }
+  }    
+@media screen and (max-width: 375px) {
+    h1.text{
+        font-size: 1.1em;
+
+    }
+    p.frase{
+        font-size: 1.3em;
+        margin-right: 1%;
+    }
+    p.text-div2{
+        font-size: 1em;
+        text-align: center;
+    }
+    div.container{
+        display: block;
+    }
+    div.container img.img_materias{
+       margin-left: 30%;
+       margin-top: 10%;
+       margin-bottom: 15%;
+        width: 7rem;
+        height: 10rem;
+    }
+    div.container button.text{
+        font-size: 1.3em;
+        width: 8rem;
+        height: 4rem;
+        margin-top: 6rem;
+    }
+    div.munduca{
+        margin-top: 5px;
+        width: 100%;
+     }
+    div.waves{
+        padding-top: 30%;
+    }
+
+}
+@media screen and (max-width: 320px) {
+    h1.text{
+        font-size: 0.9em;
+
+    }
+    p.frase{
+        font-size: 1.3em;
+        margin-right: 1%;
+    }
+    p.text-div2{
+        font-size: 0.8em;
+        text-align:center;
+    }
+    div.container{
+        display: block;
+    }
+    div.container img.img_materias{
+       margin-left: 30%;
+       margin-top: 10%;
+       margin-bottom: 15%;
+        width: 7rem;
+        height: 10rem;
+    }
+    div.container button.text{
+        font-size: 1.3em;
+        width: 8rem;
+        height: 4rem;
+        margin-top: 6rem;
+    }
+    div.munduca{
+        margin-top: 5px;
+        width: 100%;
+     }
+    div.waves{
+        padding-top: 40%;
+    }
+    div.texto-recentes h1.disciplinasR{
+        font-size: 0.6em;  
+  }
+}
+
+.navbar {
+    
+    border-bottom-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient(to right, #F20519, #FFC000, #693FD2, #0476D9, #0ABF04) 1;
+}
+
+.container{
+    width: 100% !important
+    ;
+}
+.text{
+    font-family: "Nunito";
+}
+.frase{
+    font-size: 3em;
+    color: #004356;
+}
+.speak-all{
+    color:#004356;
+    display: flex;
+    justify-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+.speak{
+    color: #004356;
+    margin-left: 5px;
+}
+.comecar{
+    width: 200px;
+    height: 70px;
+    background-color: #0476D9;
+    color: white;
+    
+    border-width: 0px 0px 5px 5px;
+
+    border-style: solid;
+    font-size: 28px;
+    border-color: #693FD2;
+
+
+    border-radius: 40px;
+}
+.div-2{
+    
+    background: linear-gradient(180deg, rgba(245, 245, 245, 0.1) 0%, rgba(0, 67, 86, 0.2) 17%, rgba(0, 67, 86, 0.2) 80.5%, rgba(245, 245, 245, 0.1) 100%);
+
+}
+.titulo{
+    margin-bottom: 30px;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 95.48px;
+    text-align: left;
+    color: #9B51E0;
+
+
+}
+.texto-div2 {
+    width: 55%;
+}
+.text-div2{
+    font-size: 37px;
+    font-weight: 700;
+    line-height: 79.11px;
+  
+    color: #004356;
+
+}
+.cont-text2{
+    width: 90%;
+}
+.img-div{
+    margin: 40px;
+}
+.foot{
+    text-align: center;
+    height: 70vh;
+    margin-top: 10rem;
+}
+.munduca img{
+    display: block;
+    margin: auto;
+}
+.iniciar{
+    width: 400px ;
+    margin-top: 30px;
+    background-color: #693FD2;
+    border-color: #0476D9;
+
+
+   
+}
+.svg {
+    width: 100%;
+    height: 200px;
+}
+.wave1 {
+    
+    animation: moveWave1 3s ease-in-out infinite alternate;
+}
+
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 200px;
+    position: relative;
+    z-index: -1000;
+}
+
+
+.waves{
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    height: 20vh;
+    
+}
+
+@keyframes moveWave1{
+    from{
+        transform: translateX(-50px)
+    }
+}
+
+.wave2 {
+    animation: moveWave2 3s 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes moveWave2{
+    from{
+        transform: translateX(-40px)
+    }
+}
+
+
+.titu{
+    font-family: 'Nunito';
+    font-size: 40px;
+    font-weight: 800px;
+    color: #004356;
+}
+
+.text-ar{
+    width: 100%;
+    height: 100px;
+    padding-left: 10%;
+    display: flex;
+    align-items: center;
+}
+.pesquisa{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 70px;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+.barra{
+    width: 80%;
+    height: 60%;
+    border: 1px solid #9B51E0;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.texto-recentes{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    font-size: 30px;
+    
+}
+.texto-recentes h1{
+    font-size: 28px;
+    color: #004356;
+    font-weight: 800px;
+    
+}
+.texto-recentes h2{
+    font-size: 22px;
+    color: #F20519;
+    font-weight: 800px;
+}
+.texto-recentes h3{
+    font-size: 18px;
+    color: #004356;
+    font-weight: 800px;
+}
+.tarefas{
+    display: flex;
+    width: 100%;
+    height: 220px !important;
+    align-items: center;
+    height: auto;
+    justify-content: center;
+}
+.tarefas1{
+    display: block;
+    width: 100%;
+    height:max-content !important;
+    align-items: center;
+    justify-content: center;
+}
+.btn-adicionar{
+    display:flex;
+    align-items: center;
+    font-size: 22px;
+    color: #004356;
+
+}
+.btn-adicionar:hover .addition{
+    background-color: #004356;
+    color: white;
+    transition: 0.6s;
+}
+.addition{
+    width: 100px;
+    height: 100px;
+    border: 4px solid #004356;
+    border-radius: 50%;
+    margin: 5px;
+    font-family: "Nonito";
+    font-size: 70px;
+    color: #004356;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px !important;
+}
+.atividades{
+
+    display: flex;
+    width: 100%;
+    height: 500px;
+    align-items: center;
+    height: auto;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+.atts{
+    width: 80%;
+    height: 600px;
+    border: 1px solid #F20519;
+    border-radius: 30px;
+
+    padding: 1rem;
+}
+.atts-scroll{
+    height: 200px;
+    width: 100%;
+
+
+}
+.carrousel-produtos{
+    width: 100%;
+    height: 100%;
+}
+.carousel-container {
+    position: relative;
+    width: 100%;
+    margin: 0px auto;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+
+}
+  
+.carousel {
+    display: flex;
+    position: relative;
+    transform: translateX(0%);
+    margin-left: 5%;
+    transition: transform 0.5s ease-in-out;
+  }
+
+
+.card{
+    position: relative;
+    flex: 0 0 200px;
+
+    margin-right: 10px;
+    height: 200px;
+    
+    border-radius: 20px;
+    border: 1px solid #0ABF04;
+}
+.card2{
+    position: relative;
+    flex: 0 0 200px;
+ 
+    margin-right: 10px;
+    height: 200px;
+
+    border-radius: 20px;
+    border: 1px solid #FFC000;
+}
+.cardDisc {
+    position: relative;
+    flex: 0 0 200px;
+ 
+    margin-right: 10px;
+    height: 200px;
+
+    border-radius: 20px;
+    background-color: #f5f5f5;
+}
+.config{
+
+    color: #004356;
+}
+#scroll{
+    display: none;
+}
+.prev {
+    left: 10px;
+    position: absolute;
+    top: 50%;
+
+
+    transform: translateY(-50%);
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    height: 100%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.089);
+}
+.next {
+    right: 0px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    height: 100%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.089);
+}
+.speak{
+    color: #004356;
+    margin-left: 5px;
+}
+
+/* Modal - 22/06 */
+
+.modal-content {
+    border: 1.5px solid #0078d7;
+    border-top-right-radius: 2em;
+    border-top-left-radius: 2em;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    position: absolute;
+    top: 10%; 
+    left: 20%;
+    background-color: #fefefe;
+    width: 60%;
+    max-width: 100%; 
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s;
+}
+
+
+.close {
+    color: rgb(255, 255, 255);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-right: 1.5em;
+    margin-top: 0.8em;
+}
+
+.close:hover,
+.close:focus {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding-bottom: 1%;
+    background-color: #0476D9;
+    font-size: 1.5em;
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+}
+
+.modal-header h2 {
+    margin-left: 2em;
+    padding-top: 1em;
+    color: #ffffff;
+}
+.modal-body {
+    padding: 2px 16px;
+    max-height: 100vh; 
+    overflow-y: auto; 
+}
+
+
+
+
+/* Animações */
+@-webkit-keyframes slideIn {
+    from {top: -300px; opacity: 0} 
+    to {top: 20%; opacity: 1}
+}
+
+@keyframes slideIn {
+    from {top: -300px; opacity: 0}
+    to {top: 20%; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+
+
+/* Conteúdo dos resumos - 22/06*/ 
+#resumoPT, #resumoMT, #resumoTC, #resumoGH, #resumoCI{
+    display: none;
+}
+.disciplina1:hover{
+    border: 2px solid #000000;
+    cursor: pointer;
+    border-radius: 1em;
+
+}
+.section {
+    border: 3px solid #0078d7;
+    border-radius: 7px;
+    margin-bottom: 0.9em;
+}
+.section-header {
+    background-color: #0078d7;
+    color: white;
+    padding: 1em;
+    cursor: pointer;
+    font-weight: bold;
+}
+.section-content {
+    display: none;
+    padding: 1em;
+}
+.wrap{
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+.wrap > .disciplina {
+    float:left;
+    text-align: center;
+
+  }
+
+.disciplina{
+    width: 150px;
+    height: 150px;
+    margin: 0.5rem;
+    border-radius: 15%;
+
+    justify-items: center;
+    align-content: center;
+
+}
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 6px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 1s;
+}
+.popup .popuptexto {
+    visibility: hidden;
+    width: 160px;
+    color: #000000;
+    text-align: center;
+    border-radius: 6px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 1s;
+}
+  /* Show the popup on hover */
+.popup:hover .popuptext {
+    visibility: visible;
+    opacity: 1;
+}
+  /* Show the popup on hover */
+.popup:hover .popuptexto {
+    visibility: visible;
+    opacity: 1;
+}
+.escolher_disciplinas{
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.modal-body::-webkit-scrollbar {
+    width: 6px;  
+    height: 6px;             
+  }
+  
+  .modal-body::-webkit-scrollbar-track {
+    background: transparent;       
+  }
+  
+  .modal-body::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #F20519, #FFC000, #693FD2, #0476D9, #0ABF04);    
+    border-radius: 20px;       
+  }
+  .btn-materia{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    justify-content: center;
+}
+
+.disciplina:hover{
+    border-radius: 15%;
+    border-color: #004356;
+    border-width: 3px;
+    scale: 1.1;
+    transition: 400ms;
+}
+
+
+.sub-lista{
+    padding-left: 20px;
+}
+
+#disciplinasEscolhidas{
+    display: none;
+    width: 100%;
+    height: 500px;
+    align-items: center;
+    height: auto;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.adicionarAtt{
+    width: 80%;
+    height: max-content !important;
+    border: 2px solid #F20519;
+    border-radius: 30px;
+    background-color: white;
+    padding: 1rem; 
+}
+.atividadesEscolidas{
+    display: none;
+    width: 100%;
+    height: 500px;
+    align-items: center;
+    height: auto;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.attFeitas{
+    height: 9rem !important;
+    border: 2px solid #F20519;
+    border-radius: 30px;
+    background-color: white;
+}
+
+.tarefasPT{
+    max-height: max-content;
+}
+.tarefasFeitasPT{
+    margin-top: 5rem;
+}
+
+#adicionarMateria{
+    border: 2px solid #0476D9;
+    border-radius: 10px;
+    width: 13em;
+    height: max-content;
+    color: #000000;
+}
+#adicionarMateria:hover{
+    background-color:#0476D9 ;
+    scale: 1.1;
+    transition: 400ms;
+    color: #f5f5f5;
+}
+.attPT{
+    width: 150px;
+    height: 150px;
+    background-color: #0078d7;
+    border-radius: 20px;
+    margin-left: 1rem;
+    color: white; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+}
+.att:hover{
+    scale: 1.1;
+    border: 3px solid #004356;
+    transition: 400ms;
+}
+.pend{
+    height: auto !important;
+}
+.feitas{
+    height: auto !important;
+}
+.feitas_div{
+    height: 150px;
+    padding: 1rem;
+    justify-content: center;
+    color: #414141;
+    font-size: 20px;
+}
+.pend_div{
+    height: auto;
+    padding: 1rem;
+    justify-content: start;
+}
+#janela-modal {
+    width: 100%;
+    height: 163.8vh;
+    background-color: #00000056;
+    border-radius: 5px;
+    padding: 20px;
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+.janela-modal {
+    width: 100%;
+    height: 163.8vh;
+    background-color: #00000056;
+    border-radius: 5px;
+    padding: 20px;
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal{
+    width: 80%;
+    height: 60%;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    overflow-y: scroll;
+    position: relative;
+    padding-bottom: 10px;
+}
+.modal-att{
+    overflow-y: hidden;
+    display: flex;
+    height: 30%;
+    
+}
+
+.modal-att .att{
+    width: 70%;
+    height: 80%;
+    font-size: 10rem;
+}
+.text-att{
+    width: 50%;
+    align-items: center;
+    display: flex;
+    justify-items: left;
+}
+.text-att h1{
+    color: #004356;
+    font-size: 40px;
+   
+}
+.org{
+    width: 100%;
+    text-align: center;
+}
+.text-att h2{
+    color: #004356;
+    font-size: 30px;
+    margin-bottom: 8rem;
+}
+.representa-Att{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.conc{
+    width: 100%;
+    padding: 1rem;
+    padding-left: 2rem;
+    text-align: center;
+}
+.conc button{
+    text-decoration: none;
+    width: 200px;
+    height: 40px;
+    background: none;
+    border: 1px solid #8f8f8f;
+    border-radius: 20px;
+}
+.conc-ativ{
+    background-color: #0ABF04 !important;
+    border-radius: 20px;
+    border: none !important;
+    color: white !important;
+    cursor: pointer;
+}
+.conc-ativ-nulo{
+    background-color: #0ABF04 !important;
+    border-radius: 20px;
+    border: none !important;
+    color: white !important;
+    cursor: pointer;
+}
+.reset:hover{
+     scale: 1.1;
+    transition: 400ms;
+}
+.conc-ativ:hover{
+    scale: 1.1;
+    transition: 400ms;
+}
+.conc-ativ-nulo:hover{
+    scale: 1.1;
+    transition: 400ms;
+}
+.reset{
+    background-color: #0476D9 !important;
+    border: none !important;
+    color: white;
+    margin-right: 1rem;
+}
+/* Style tela de atividades */
+.att-navbar{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 0;
+    border-bottom-width: 3px;
+    border-style: solid;
+    border-color: #0476D9;
+}
+.progress-bar{
+    width: 70%;
+
+    height: 1rem;
+    background: transparent;
+    border-radius: 30px;
+    border: 1px solid #0476D9;
+    
+}
+.Matemática {
+    background-color: #F20519;
+}
+.Português {
+    background-color: #0078d7;
+}
+.Ciências {
+    background-color: #0ABF04;
+}
+.Geografia {
+    background-color: #FFC000;
+}
+.Tecnologia {
+    background-color: #5525d0;
+}
+.barraMatemática{
+    border: 3px solid #F20519;
+}
+.barraPortuguês{
+    border: 3px solid #0078d7;
+}
+.barraCiências{
+    border: 3px solid #0ABF04;
+}
+.barraGeografia{
+    border: 3px solid #FFC000;
+}
+.barraTecnologia{
+    border: 3px solid #5525d0;
+}
+.progress-bar div{
+    border-radius: 30px;
+    height: 1rem;
+    width: 0;
+
+    transition: 400ms;
+}
+.content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+.aula{
+    width: 70%;
+    height: 100%;
+}
+.titulo-Aula{
+    width: 100%;
+    padding: 1rem;
+    padding-left: 2rem;
+    height: 6em;
+}
+.titulo-Aula h1{
+    font-size: 37px;
+    color: #004356;
+}
+
+.wrapper {
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+  }
+  .wrapper i {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+  }
+  .wrapper i:active{
+    transform: translateY(-50%) scale(0.85);
+  }
+  .wrapper i:first-child{
+    left: -22px;
+  }
+  .wrapper i:last-child{
+    right: -22px;
+  }
+  .wrapper .carousel{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 1) - 12px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+  .carousel.no-transition {
+    scroll-behavior: auto;
+  }
+  .carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+  .carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+  }
+  .carousel .card {
+    scroll-snap-align: start;
+    height: 342px;
+    list-style: none;
+    cursor: pointer;
+    padding-bottom: 15px;
+    flex-direction: column;
+    border-radius: 8px;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+  .borderTarefaMatemática{
+    border: 1px solid #F20519;
+  }
+  .borderTarefaPortuguês{
+    border: 1px solid #0078d7;
+  }
+  .borderTarefaCiências{
+    border: 1px solid #0ABF04;
+  }
+  .borderTarefaGeografia{
+    border: 1px solid #FFC000;
+  }
+  .borderTarefaTecnologia{
+    border: 1px solid #5525d0;
+  }
+.card p {
+    width: 100%;
+    color: #004356;
+    font-size: 24px;
+    text-align: center;
+}
+.card button{
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.conc{
+    width: 100%;
+    padding: 1rem;
+    padding-left: 2rem;
+    text-align: center;
+}
+.conc button{
+    text-decoration: none;
+    width: 200px;
+    height: 40px;
+    background: none;
+    border: 1px solid #8f8f8f;
+    border-radius: 20px;
+}
+.back-att{
+    text-decoration: none;
+    background: none;
+    border: none;
+    color: #004356;
+}
+
+
+.tarefa{
+    border-radius: 8px;
+  
+
+}
+.tituloAtt{
+    text-align: center;
+    font-size: 24px;
+    color: #004356;
+}
+.descAtt{
+    text-align: center;
+    font-size: 19px;
+    color: #004356;
+}
+.blocos{
+    padding-left: 10%;
+    padding-right: 10%;
+  
+
+}
+.grupo-bloco{
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bloco{
+    width: 100px;
+    height: 120px;
+    margin-left: 1rem;
+    background-color: #0476D9;
+    color: white;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-family: 'Nunito';
+    font-weight: bolder;
+}
+.resposta {
+    background-color: white !important;
+
+    border: 1px solid #0476D9;
+}
+
+.grupo-bloco img{
+    width: 100px;
+    height: 100px;
+}
+.respostas{
+    display: flex;
+    border: none;
+    justify-content: center;
+    margin: 1rem;
+    
+}
+.respostas button{
+    text-decoration: none;
+    border: none;
+    cursor:pointer;
+}
+.hidden{
+    display: none !important;
+}
+.colocar{
+    background-color: #0476d96c !important;
+}
+.bloco, .resposta{
+    transition: 400ms;
+}
+.is-drag{
+    opacity: 50%;
+    cursor: move !important;
+}
+.estaDentro{
+    background-color: #0abf047e !important;
+}
+.resposta button{
+    text-decoration: none;
+    border: none;
+    cursor:pointer;
+    margin: 0;
+} 
+.reset{
+    background-color: #0476D9 !important;
+    border: none !important;
+    color: white;
+    margin-right: 1rem;
+}
+.reset:hover{
+    scale: 1.1;
+    transition: 400ms;
+}
+.conc-ativ{
+    background-color: #0ABF04 !important;
+    border-radius: 20px;
+    border: none !important;
+    color: white !important;
+    cursor: pointer;
+}
+.conc-ativ:hover{
+    scale: 1.1;
+    transition: 400ms;
+}
+
+/*PÁGINA DE LOGIN*/
+.login{
+    margin-top: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.login h1{
+    font-size: 36px;
+    padding-top: 1em;
+    padding-left: 0.85em;
+}
+.login .input-box{
+    width: 90.5%;
+    height: 50px;
+    margin: 20px 0;
+}
+.login input{
+    /* width: 100%; */
+    height: 100%;
+    background: #fff;
+    border: none;
+    outline: none;
+    color: #000000;
+    border-radius: 10px;
+}
+.input-box input{
+    margin-left: 30px;
+    font-size: 16px;
+    padding: 20px 45px 20px 20px;
+}
+.input-box input::placeholder{
+    color:  #a5a0a0;
+}
+.remember-forgot{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+.login .btn_login{
+    width: 90.5%;
+    height: 45px;
+    background: #004356;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white !important;
+}
+.button-login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+}
+.login .register-link{
+    font-size: 14.5px;
+    text-align: center;
+}
+.register-link p a{
+    color: #004356;
+    text-decoration: none;
+}
+.register-link p a:hover{
+    text-decoration: underline;
+}
+.caixa{
+    width: 600px;
+    border-radius: 20px;
+    background-color: rgba(4, 108, 137, 0.55);
+}
+/*PÁGINA DE CADASTRO*/
+.container_ {
+    background-color: rgba(4, 108, 137, 0.55);
+    padding: 2em;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 600px;
+}
+
+.container_ h2 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.container_ h3 {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 26px;
+}
+
+.toggle-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+#alunoBtn{
+    color: white ;
+}
+#paisBtn{
+    color: #004356 ;
+}
+
+.toggle-container button {
+    background-color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    flex: 1;
+    text-align: center;
+    border-radius: 15px;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+}
+
+.toggle-container button.active {
+    background-color: #154f60;
+}
+
+label {
+    color: white;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+
+    border-radius: 10px;
+}
+
+.ensino-container,
+.serie-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.ensino-container button,
+.serie-container button, .test {
+    background-color: white;
+    border: none;
+    padding: 10px;
+    color: #154f60;
+    cursor: pointer;
+    flex: 1;
+    margin: 0 5px;
+    border-radius: 15px;
+}
+
+.ensino-container button.active,
+.serie-container button.active {
+    background-color: white;
+}
+
+.ensino-container button.active:hover, .test:hover{
+    background-color: #004356;
+    color:white;
+}
+.serie-container button:hover{
+    background-color: #004356;
+    color:white;
+}
+
+.checkbox-container {
+    margin-bottom: 10px;
+}
+.test {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    flex: 1;
+    margin: 0 5px;
+    border-radius: 15px;
+    color: #004356;
+}
+
+/* Escondemos o radio original */
+input[type=radio] {
+    display: none;
+}
+
+/* Usamos o pseudo-element :before para recriar o novo radio */
+.test:before {
+    content: "";
+    display: inline-block;
+    border-radius:15px;
+    color: #004356;
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+   
+}
+
+/* CSS Responsavel por definir o estilo para radio Checkado */
+input[type=radio]:checked + label:before {
+    content: "\2022";
+    color: #f3f3f3;
+    font-size: 30px;
+    text-align: center;
+    line-height: 18px;
+}
+.checkbox-container label {
+    display: inline-block;
+    color: white;
+}
+
+.checkbox-container input {
+    margin-right: 5px;
+}
+
+.submit-container {
+    text-align: center;
+}
+
+#submit{
+    background-color: #1b8291;
+    border: none;
+    padding: 10px;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.submit-container a {
+    display: block;
+    margin-top: 10px;
+    color: #154f60;
+    text-decoration: none;
+}
+
+.submit-container a:hover {
+    text-decoration: underline;
+}
+
+.submit-container a:hover {
+    text-decoration: underline;
+}
+
+  @media screen and (max-width: 900px) {
+    .wrapper .carousel {
+      grid-auto-columns: calc((100% / 2) - 9px);
+    }
+    .card p {
+        width: 100%;
+        color: #004356;
+        font-size: 15px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .wrapper .carousel {
+      grid-auto-columns: 100%;
+    }
+  }
+
+.aula{
+    animation: moveAula 0.7s ease-in-out;
+}
+  @keyframes moveAula{
+    from{
+        transform: translateX(50%)
+    }
+}
+.hover-letra:hover{
+    scale: 1.1;
+    transition: 400ms;
+}
+.resp-select{
+    scale: 1.1;
+    border: 2px solid #004356 !important;
+}
+.exibe{
+    display: block;
+}
+.img-fim{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-fim img {
+    width: 20%;
+    height: 80%;
+}
+.text-Final{
+    width: 100%;
+    color: #004356;
+    text-align: center;
+}
+.conc-ativ-2{
+    background-color: #0ABF04 !important;
+    border-radius: 20px;
+    border: none !important;
+    color: white !important;
+    cursor: pointer;
+}
+.correcao{
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 20%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem;
+    color: white;
+    font-size: 24px;
+}
+.correcao button{
+    color: white;
+    background-color: none;
+    border: 1px solid white;
+}
+.correcao button:hover{
+    scale: 1.1;
+    transition: 400ms;
+    cursor: pointer;
+}
+.acerto{
+    display: flex;
+    border-top: 5px solid #0adf03;
+    background-color: #0abf04;
+}
+.errou{
+    display: flex;
+    border-top: 5px solid #ff2235;
+    background-color: #F20519;
+}
+.modal-sair{
+    width: 40%;
+    height: 30%;
+    overflow-y: hidden;
+}
+.modal-Final{
+    overflow-y: hidden !important;
+    width: 60%;
+
+    height: 70%;
+}
+#btn-fechaModal{
+    position: absolute;
+    top: 0;
+}
+
+.video{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.video_youtube{
+    border-radius: 25px;
+}
+
+
+/*RESPONSIVIDADE PÁGINA 2*/
+
+@media screen and (max-width: 425px) {
+
+    .wrap{
+        display: inline-flex;
+        flex-wrap: wrap;
+    }
+    .disciplina:hover{
+        display: flex;
+        align-items: center;
+        /* width: 100px;
+        height: 100px; */
+    }
+    .adicionar_desaparecer{
+        position: relative;
+        top: 620px;
+    }
+    .text-title{
+        position: relative;
+        font-size: 1.5em;
+        top: 615px;
+        margin-left: 27px !important;
+    }
+    #adicionarMateria{
+        width: 7em;
+    }
+    .tarefas{
+        display: flex;
+        align-content: flex-start;
+        flex-wrap: wrap;
+        /* overflow: scroll; */
+    }
+    .attPT{
+        width: 100px;
+        height: 100px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .section-header{
+        font-size: 13px;
+    }
+}
+/* 
+@media screen and (min-width: 375px) {
+    #adicionarMateria{
+        width: 7em;
+    }
+    /* .section-header{
+        font-size: 15px;
+    }
+
+} */
+
+/* userEscolha Design*/
+body{
+    margin: 0;
+}
+.usersTela{
+    display: flex;
+    margin: 0;
+    overflow: hidden;
+}
+.users{
+    margin: 0;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user1{
+    background-color: #0043565c;
+}
+.user2{
+    background-color: #693fd261;
+}
+.user2:hover, .img2{
+    background-color: #5525d0 !important;
+}
+.user1:hover, .img1{
+    background-color:  #004356 !important;
+}
+.iconUser{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: White;
+    overflow: hidden;
+}
+.users:hover, .iconUser{
+    scale:1.1;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.deco{
+    z-index: -1000;
+
+}
+.deco svg{
+    z-index: -1000;
+}
+.iconUser img{
+    width: 100%;
+    height: 100%;
+}
+/* calendario */
+.nav-buttons{
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    border-bottom: 1px solid black;
+}
+.button-mes{
+    text-decoration: none;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 40px;
+    font-size: 18px;
+    color: black;
+    width: 100px;
+}
+.button-mes:hover{
+    background-color: black;
+    color: white;
+}
+#calendar{
+    margin: 12rem 12rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+
+}
+
+.user{
+    display: flex;
+    align-items: center;
+    width: 85%;
+    justify-content: space-between;
+    height: 50px;
+    color: #FFF;
+    border-radius: 50px;
+    margin-bottom: 1em;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.user_imagem{
+    width: 42.446px;
+    height: auto;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background: url(<path-to-image>) lightgray 50% / cover no-repeat;   
+}
+
+.esquerda{
+    margin: 0.5em;
+    display: flex;
+    align-items: center;
+    width: 200px;
+}
+
+.letra{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    color: #004356;
+}
+
+.pontuacao{
+    margin: 0.5em;
+}
+
+.ranking{
+    display: flex;
+    justify-content: center;
+}
+
+.name{
+    padding-left: 5%;
+}
+
+.emblemas{
+    display: flex;
+    margin: 3em 3em;
+    justify-content: space-around;
+}
+
+.grupo-de-imagens{
+    width: 150px;
+}
+.adicionar, .adicionar_desaparecer, .adicionar_emblema, .adicionar_emblema2, .adicionar_emblema3{
+    width: 80%;
+    height: max-content !important;
+    border: 1px solid #0476D9;
+    border-radius: 30px;
+    background-color: white;
+    padding: 1rem;
+}
+
+.adicionar_emblema{
+    border: 3px solid #004356;
+}
+
+.adicionar_emblema2{
+    border: 3px solid    #693FD2;
+}
+
+.adicionar_emblema3{
+    border: 3px solid #693FD2 !important;
+}
+
+
+.adicionar_ranking, .adicionar_ranking2{
+    display: inline-grid;
+    width: 98%;
+    height: max-content !important;
+    border: 1px solid #FFC000;
+    border-radius: 30px !important;
+    background-color: white;
+    justify-items: center;
+
+}
+
+.adicionar_ranking2{
+    margin: 0 0 0px 13px;
+    padding: 1em;
+    border: 3px solid #FFC000;
+}
+
+.cabeca_rankink{
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background: #FFC000;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    border-radius: 17.5px 17.5px 0px 0px !important;
+    margin-bottom: 1em;
+}
+
+.texto-recentes{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    font-size: 30px;
+    
+}
+
+.texto-recentes-emblema{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    font-size: 30px;
+    padding-left: 0.40em;
+}
+
+.texto-recentes, .texto-recentes-emblema h1{
+    font-size: 28px;
+    color: #004356;
+    font-weight: 800px;
+    
+}
+.bg1{
+    background-color: #0476D9;
+}
+.bg2{
+    background-color: #5525d0;
+}
+.bg3{
+    background-color: #F20519;
+}
+.bg4{
+    background-color: #0ABF04;
+}
+.bg5{
+    background-color: #FFC000;
+}
+
+.text-emblemas{
+    display: flex;
+    margin-top: 2em;
+    flex-direction: column;
+    align-items: center;
+}
+
+.emblema-text{
+    text-align: center;
+    font-size: 28px;
+    width: 350px;
+    font-family: 'Nunito';
+    color: #004356;
+    margin-bottom: 1em;
+}
+
+.btn-trocar{
+    width: 150px;
+    height: 60px;
+    background-color: #9B51E0;
+    color: white;
+    border-width: 0px 0px 5px 5px;
+    border-style: solid;
+    font-size: 20px;
+    border-color: #FFC000;
+    border-radius: 40px;
+    margin-bottom: 1em;
+}
+
+.figurinhas{
+    width: 90px;
+    height: 90px;
+}
+
+.btn-pontuacao, .btn-emblemas{
+    color: #FFF;
+    width: 10em;
+    border-radius: 20px;
+    border: 3px solid #FFC000;
+    background: #9B51E0;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-bottom: 1em;
+}
+
+.btn-valor, .btn-trocar2, .btn-emblemas{
+    color: #FFF;
+    width: 10em;
+    border-radius: 20px;
+    border: 3px solid #FFC000;
+    background: #9B51E0;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-bottom: 1em;
+}
+.btn-trocar2{
+    height: 3.3em;
+}
+.conjunto_emblemas1, .conjunto_emblemas2, .conjunto_emblemas3{
+    width: 80%;
+    display: flex;
+    border-radius: 30px;
+    border: 3px solid #0476D9;
+    background: rgba(245, 245, 245, 0.00);
+    justify-content: space-around;
+    margin-bottom: 1.5em;
+    padding: 0.5em;
+}
+
+.conjunto_emblemas2{
+    border: 3px solid #F20519;
+}
+
+.conjunto_emblemas3{
+    border: 3px solid #0ABF04;
+}
+
+.valor{
+    display: flex;
+    height: 3em;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.botoes{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.emblemas-btn{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-emblemas{
+    margin-top: 1.5em;
+    height: 2.7em;
+    width: 7em;
+}
+
+.h_{
+    font-size: 24px;
+}
+
+.config{
+    display: flex;
+    justify-content: center;
+}
+
+.config-box{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: max-content;
+    border-radius: 50px;
+    border: 3.5px solid #004356;
+    flex-wrap: wrap;
+}
+
+.box-config{
+    margin: 2em;
+    width: 100%;
+    border-radius: 35px;
+    border: 3.5px solid #004356;
+    height: max-content;
+}
+
+.top-config{
+    display: flex;
+    align-items: center;
+    background-color:#004356;
+    height: 65px;
+    border-radius: 30px 30px 0px 0px;
+}
+
+.config-text{
+    font-family: 'Nunito';
+    font-size: 30px;
+    margin-left: 1em;
+    color: white;
+}
+
+.text-input-config{
+    margin-top: 1em;
+    color: #004356;
+    margin-left: 1.3em;
+    font-size: 24px;
+    font-family: 'Nunito';
+}
+
+.config-input{
+    width: 96% !important;
+    margin-left: 1.3em;
+    border-radius: 35px !important;
+    background: rgba(0, 67, 86, 0.50) !important;
+    color: white;
+}
+.config-input::placeholder{
+    color: white;
+}
+
+.font-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.font-button {
+    background-color: #004356;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.font-button.small {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+}
+
+.font-button.medium {
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+}
+
+.btn-contraste{
+    margin: 1em;
+    width: 25em;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 1.3em
+}
+
+.btn-ligar{
+    font-size: 20px;
+    color: white;
+    width: auto;
+    height: 50px;
+    padding: 1rem;
+    display: flex;
+
+    align-items: center;
+    background-color: #0ABF04;
+    border-radius: 35px;
+}
+
+
+
+.salvar-btn{
+    display: flex;
+    width: 93%;
+    justify-content: flex-end
+}
+
+.btn-salvar{
+    font-size: 20px;
+    color: white;
+    width: 10em;
+    height: 50px;
+    background-color: #0ABF04;
+    border-radius: 35px;
+    margin-bottom: 1em;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5em;
+}
+
+.w-100{
+    width: 100%;
+}
+
+.h-100{
+    height: 100%;
+}
+
+.m-2{
+    margin: 12px;
+}
+
+.p-4{
+    padding: 24px;
+}
+
+/**/
+#form-form{
+    & .image-upload{
+        position: relative;
+        width: 200px;
+        height: 200px;
+        border: 4px solid purple;
+        border-radius: 100%;
+        box-shadow: 2px 3px 12px #00000060;
+        overflow: hidden;
+    }
+
+    & .image-upload img{
+        object-fit: cover;
+    }
+
+    & .image-upload i{
+        position: absolute;
+        margin: 0 auto;
+        font-size: 50px;
+        color: purple;
+    }
+
+    & #image-field{
+        position: absolute;
+        margin: 0 auto;
+        width: 100px;
+        height: 100px;
+        opacity: 0;
+    }
+}
+
+.dropdown-container{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 2em;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-container span{
+    border-radius: 0.5em;
+    background: #004356;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    color: white;
+    font-size: 22px;
+} 
+
+.dropdown-container .dropdown-item{
+    position: absolute;
+    width: 100%;
+    display: none;
+}
+
+.dropdown-container .dropdown-item a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: .2rem;
+    background: #004356;
+    font-size: 20px;
+}
+
+.dropdown-container:hover .dropdown-item{
+    display: block ;
+    
+}
+.alto-contraste {
+    background-color: black !important;
+    color: yellow !important; 
+  }
+  
+  .alto-contraste h1, .alto-contraste p {
+    color: yellow !important;
+  }
+  .protanopia {
+    filter: grayscale(50%) sepia(100%) hue-rotate(-50deg) saturate(200%);
+  }
+  
+  .deuteranopia {
+    filter: grayscale(50%) sepia(100%) hue-rotate(-20deg) saturate(200%);
+  }
+  
+  .tritanopia {
+    filter: grayscale(50%) sepia(100%) hue-rotate(90deg) saturate(200%);
+  }
+  
+  .monocromacia {
+    filter: grayscale(100%);
+  }
+
+  .dropdown-item a {
+    cursor: pointer;
+
+  }
+  .dropdown-item a:hover{
+    background-color: #00232c;
+  }
+  .btnAreaAluno{
+    font-size: 15px;
+    color: white;
+    width: 10em;
+    height: 50px;
+    background-color: #0ABF04;
+    border-radius: 35px;
+
+    margin-right: 1em;
+  }
+.foto_perfil{
+    height: 50px;
+    width: 50px;
+  }
+  .foto_perfil:hover{
+    cursor: pointer;
+  }
+.foto_perfil img{
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    background-color: transparent;
+    border-radius: 50%;
+  }
+  .conteiner{
+    min-height: 700px;
+    width: 100%;
+
+  }
+  /* tela de área do Aluno */
+  .modal-fotoPerfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    overflow-y: hidden;
+  }
+  .perfilImg{
+    width: 60%;
+    height: 80%;
+    border-radius: 50%;
+  }
+  .perfilImgdiv{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    border-radius: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .altura{
+    height: 90%;
+    width: 50%;
+  }
+  .nav-lateral{
+    display: block;
+    width: 10%;
+    text-align: start;
+    height: 100%;
+    padding-top: 3rem;
+
+  }
+  .selecionar-imgs{
+    width: 50%;
+    height: 90%;
+    display: flex;
+  }
+  .imgsSelecionar{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas de tamanho igual */
+    gap: 10px; /* Espaço entre os itens */
+    width: 85%;
+    max-height: 100%;
+    overflow-y: scroll;
+    padding: 1rem;
+  }
+  .imgPerfilSelecionavel{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  border-radius: 20px;
+  height: 200px;
+  }
+  .org2{
+    width: 100%;
+  }
+  .imgPerfilSelecionavel img {
+    width: 100%;
+    height: 100%;
+  }
+  .emle img{
+    width: 50%;
+    height: 50%;
+  }
+  .imgPerfilSelecionavel img:hover {
+scale: 1.1;
+transition: 0.2s;}
+  .btnSel {
+    border-bottom: 1px solid gray;
+  }
+  .wav{
+    transition: 0.5s;
+  }
+  .sairConta{
+    background-color: #F20519;
+    margin: 10px;
+  }
+  .info-img{
+    width: 40px;
+    padding-left: 0.2em;
+}
+
+.informacoes{
+    display: flex;
+    align-items: center;
+}
+
+.cadeado{
+    display: flex;
+    justify-content: center;
+}
+   
+.img-text{
+    display: flex;
+    align-items: center;
+}
+
+.text-img{
+    margin-top: 2em;
+    height: 200px;
+    width: 100px;
+}
+.attEnviar{
+    width: 100%;
+    height: 150px;
+    border-radius: 20px;
+    background-color: #a5a0a0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+    font-size: 20px;
+    color: white;
+}
+.tarefas-recentes{
+    display: flex;
+    width: 100%;
+    height: 500px;
+    align-items: center;
+    height: auto;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+.adicionar, .adicionar_desaparecer{
+    width: 80%;
+    height: max-content !important;
+    border: 1px solid #0476D9;
+    border-radius: 50px;
+    background-color: white;
+    padding: 1rem;
+    text-align: center;
+}
+.separador {
+    width: 100%;
+    text-align: center;
+    padding: 5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.obj{
+    width: 80%;
+}
+.elementS{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #8f8f8f;
+}
+.intersecao{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+}
+.cadeado{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: none !important;
+    margin: 1rem;
+}
+.nSelecionavel{
+    background-color: transparent !important;
+    border: 2px solid #a5a0a0;
+    color: #414141;
+}
+.nomeCrianca{
+    font-size: 34px;
+    font-weight: bolder;
+}
+.fechar{
+    height: 100%;
+    text-align: center;
+}
+.menu{
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu img{
+    width: 30px;
+    height: 30px;
+    color: #000000;
+}
+.menu img:hover{
+scale: 1.1;
+transition: 0.2s;
+}
+.link{
+    color: #004356;
+    font-weight: bold;
+}
+.moedas{
+    width: 50px;
+    height: 50px;
+}
+.figurinhas.selected {
+    scale: 1.5;
+    transition: 0.5s;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Fundo escuro */
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .center-image {
+    position: relative;
+    z-index: 3; /* Aparece acima do efeito */
+    width: 300px; /* Tamanho da imagem */
+    height: 300px;
+    background-color: white;
+    border-radius: 50%; /* Arredondamento opcional */
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+  }
+      /* Brilhos coloridos */
+      .sparkle {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        z-index: 2; /* Aparece acima das bolinhas */
+        opacity: 0.8;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Centraliza as bolinhas */
+        animation: explode 1s infinite ease-out;
+        pointer-events: none;
+      }
+  
+      /* Animações para fazer as bolinhas saírem do centro */
+      @keyframes explode {
+        0% {
+          transform: translate(-50%, -50%) scale(0.5);
+          opacity: 1;
+        }
+        100% {
+          transform: translate(calc(-50% + var(--x)), calc(-50% + var(--y))) scale(1.5);
+          opacity: 0;
+        }
+      }
+  
+      /* Variantes de bolinhas em diferentes direções */
+      .sparkle:nth-child(1) {
+        --x: -160px;
+        --y: -120px;
+        animation-delay: 0s;
+        background: radial-gradient(circle, rgba(255,255,255,1) 0%, #0ABF04 40%, transparent 70%);
+      }
+      .sparkle:nth-child(2) {
+        --x: 200px;
+        --y: -100px;
+        animation-delay: 0.2s;
+        background: radial-gradient(circle, rgba(255,255,255,1) 0%, #0078d7 40%, transparent 70%);
+      }
+      .sparkle:nth-child(3) {
+        --x: -200px;
+        --y: 140px;
+        animation-delay: 0.4s;
+        background: radial-gradient(circle, rgba(255,255,255,1) 0%, #5525d0 40%, transparent 70%);
+      }
+      .sparkle:nth-child(4) {
+        --x: 160px;
+        --y: 160px;
+        animation-delay: 0.6s;
+        background: radial-gradient(circle, rgba(255,255,255,1) 0%, #F20519 40%, transparent 70%);
+      }
+      .sparkle:nth-child(5) {
+        --x: -100px;
+        --y: -200px;
+        animation-delay: 0.8s;
+        background: radial-gradient(circle, rgba(255,255,255,1) 0%, #FFC000 40%, transparent 70%);
+      }
+      .overtext{
+        color: white;
+        font-size: 22px;
+        margin-bottom: 3rem;
+      }
+      .overbtn{
+        width: 70%;
+        height: 60px;
+        margin-top: 2rem;
+        background-color: #0ABF04;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 30px;
+      }
+      #valor{
+        transition: 0.5s;
+      }
+      
+      .recic img{
+        width: 100%;
+        height: auto;
+    }
+    .recic p{
+        display: none;
+    }
+    .recic h1{
+        font-size: 0.4em;
+    }
+    .grupo-bloco img{
+
+        border-radius: 50%;
+    
+    }
+    .a img{
+
+        border-radius: 50%;
+    
+    }
+    .estatisticas{
+        margin: 10rem 10rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        border-radius: 20px;
+        border: 2px solid #154f60;
+        padding: 1rem;
+        text-align: center;
+    }
+    .divExibir{
+        height: 200px;
+        width: 900px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+    
+
+    }
+    .embleminha{
+        min-width: 150px !important;
+        min-height: 150px;
+        border-radius: 20px;
+        border: 2px solid #0000006c;
+        margin-left: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .embleminha:hover{
+        scale: 1.1;
+        border: 2px solid #00232c;
+        transition: 0.2s;
+    }
+    .quadroDesenho{
+        padding: 3rem;
+        
+        min-height: 700px;
+        text-align: center;
+    }
+    .boardDesenho{
+   
+        width: 100%;
+        min-height: 700px;
+        display: flex;
+        padding: 2rem;
+        align-items: center;
+    }
+    .desenhosSalvos{
+        width: 25%;
+        height: 600px;
+        background-color: #00232c73;
+        border-radius: 20px;
+        margin-right: 1rem;
+        padding: 1rem;
+        font-size: 20px;
+        color: #00232c;
+        
+    }
+    .desenhar {
+        
+        margin-left: 1rem;
+        width: 75%;
+        height: 600px;
+    }
+    .btnsDesenho{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20%;
+        color: #00232c;
+        
+    }
+    .btnsDesenho button{
+        background-color: #00232c;
+        width: 150px;
+        height: 50px;
+        margin-left: 1rem;
+        color: white;
+        border-radius: 30px;
+        
+    }
+    .labelCor{
+        color: #00232c;
+    }
+    .imgSalva{
+        background-color: white;
+        margin-bottom: 1rem;
+    }
+    #desenhosSalvos{
+        overflow-y: scroll;
+        width: 100%;
+        height: 510px;
+        color: #00232c;
+    }
+    .desenhoArt{
+        width: 150px;
+        height: 150px;
+    }

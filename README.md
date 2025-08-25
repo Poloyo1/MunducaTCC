@@ -1,5 +1,8 @@
-# Munduca
- Projeto de TCC - Munduca uma plataforma de educação infantil acessível desenvolvida com elementos gamificados.
- utilizar o arquivo "munduca_bd" para carregar o banco de dados MySQL.
-<h1>Munduca - Plataforma de estudos Infantil</h1>
-<h3>Link para acesso: <a href="http://munduca.page.gd" target="_blank">Munduca</a></h3>
+# MUNDUCA: PLATAFORMA DE EDUCAÇÃO INFANTIL ACESSÍVEL
+ Projeto de Conclusão de Curso (TCC) - Munduca: uma plataforma de educação infantil acessível desenvolvida com elementos gamificados.
+ Utilize o arquivo "munduca_bd" para carregar o banco de dados MySQL.
+<h1>Plataforma de Estudo Infantil - Munduca</h1>
+<p>A Educação Infantil Lúdica e Inclusiva desempenha um papel fundamental no desenvolvimento integral das crianças, buscando não apenas transmitir conhecimentos, mas também promover habilidades essenciais para o século XXI. Ao integrar brincadeiras tanto online quanto presenciais, esta abordagem não só cativa a curiosidade natural das crianças, mas também facilita o aprendizado de maneira envolvente e acessível.
+<p>Em suma, a tentativa de adaptação brasileira a educação a distância foi prejudicial para as crianças que estavam ingressando no mundo do aprendizado. As escolas virtuais não conseguiram com efetividade substituir o espaço físico, gerando nos alunos, lacunas de aprendizado que afetaram o desempenho geral de muitas crianças. Isso causou problemas não apenas para os alunos que teriam que se empenhar dobrado para recuperar o conhecimento perdido posteriormente, como também afetou os pais das crianças, que muitas vezes tinham que dispor do seu tempo para se colocar na posição de professor de seus filhos, tarefa que exige capacitação técnica relacionada a pedagogia. Pensando nisso, o projeto Munduca foi desenvolvido, uma plataforma de educação que reúne os conteúdos principais do ensino fundamental I, e leciona de forma didática e interativa em sua plataforma digital. Com acessibilidade e experiencia do usuário pensado totalmente para ser de fácil uso para crianças, e qualquer outro tipo de usuário que queira aprender de forma divertida e interativa. 
+<p>O site Munduca foi desenvolvido com base nas boas práticas de desenvolvimento semântico das linguagens HTML 5, CSS 3, Javascript e PHP, com banco de dados MySQL integrado através da ferramenta XAMPP. Com implementação da API openAI, que permite a integração com recursos das inteligências artificiais mais relevantes atualmente. O projeto foi desenvolvido desde seu princípio pensando em acessibilidade e experiencia de usuário, com recursos e práticas que promovem uma melhor usabilidade do site. 
+<h3>Link de acesso à plataforma: <a href="http://munduca.page.gd" target="_blank">Munduca</a></h3>

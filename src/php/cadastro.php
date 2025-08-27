@@ -22,7 +22,7 @@
     </style>
 </head>
 <body id="texo-acessibilidade">
-<script  type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+<script  type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
     <nav class="navbar">
         <div class=" flex justify-between px-7 ">
             <a href="index.php"><img class="size-16" src="imgs/Logo Munduca.png" alt="Logo Munduca" style="width: 130px; height: 120px;"></a>

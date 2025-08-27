@@ -6,10 +6,6 @@ session_start();
         include_once('config.php');
         $email = $_POST['email'];
         $senha = $_POST['senha'];
-
-        print_r('Email: ' . $email);
-        print_r('<br>');
-        print_r('Senha: ' . $senha);
       
 
         $sql = "SELECT * FROM pais_responsaveis Where email = '$email' LIMIT 1";

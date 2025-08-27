@@ -10,7 +10,7 @@ function speak(id){
 
 function enviar(pagina){
 
-  window.location.href = pagina
+  window.location.href = "https://munduca.page.gd/"+pagina
 
 }
 

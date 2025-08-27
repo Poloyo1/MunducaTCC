@@ -55,7 +55,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
     </style>
 </head>
 <body id="texo-acessibilidade">
-<script  type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+<script  type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
     <nav class="navbar">
         <div class=" flex justify-between px-7 ">
             <img class="size-16" src="imgs/Logo Munduca.png" alt="Logo Munduca" style="width: 130px; height: 120px;">
@@ -128,7 +128,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
                     success: function(data){
                         const falha =document.getElementById('falha')
                         if(data == 1){
-                            enviar('hubHome.php')
+                            enviar('HubHome.php')
                         }else{
                             falha.innerText = data;
                             console.log(data)

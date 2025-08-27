@@ -99,7 +99,7 @@ button:hover {
 </style>
 </head>
 <body>
-<script  type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+<script  type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
     <nav class="att-navbar" id="navATT">
         <button class="back-att" onclick="sair()">X</button>
         <div class="progress-bar" id="prossBar">

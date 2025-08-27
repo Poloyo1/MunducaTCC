@@ -53,7 +53,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
         <div class="sparkle"></div>
     </div>    
 </div>
-<script  type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+<script  type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
 <nav class="navbar">
 <div class=" flex justify-between px-7 ">
             <a href="index.php">

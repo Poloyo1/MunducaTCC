@@ -1,5 +1,27 @@
+
+<?php 
+session_start();
+
+include_once('../php/config.php');
+if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)){
+    unset($_SESSION['email']);
+    unset($_SESSION['senha']);
+    header('Location: index.php');
+} else{
+    $logado = $_SESSION['email'];
+    $rg = $_SESSION['rg'];
+    
+    $query_crianca = mysqli_query($mysqli, "SELECT * FROM criancas where rg_pai = '$rg'");
+    $result = mysqli_fetch_assoc($query_crianca);
+}
+?>
+
+
+
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +29,10 @@
     <title>Atividade</title>
     <link rel="icon" class="size-16" href="../imgs/letra.png" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <style>
-        
-    </style>
 </head>
-<body onLoad="carregarConfiguracoes()">
-<script  type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-
-<nav class="att-navbar" id="navATT">
+<body>
+<script  type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <nav class="att-navbar" id="navATT">
         <button class="back-att" onclick="sair()">X</button>
         <div class="progress-bar" id="prossBar">
                 <div id="barras"></div>
@@ -22,34 +40,34 @@
     </nav>
     <section class="content">
         <div class="aula exibe" id="att1">
-            <div class="titulo-Aula text"><h1>Características dos Materiais </h1></div>
+            <div class="titulo-Aula text"><h1>Alfabetização </h1></div>
             <div class="wrapper">
                 <i id="left" class="fa-solid fa-angle-left"><</i>
                 <ul class="carousel">
                 <li class="card">
                     <div class="video">
-                    <iframe width="560" height="315" class="video_youtube" src="https://www.youtube.com/embed/_32toxkV4OY?si=umUcKkxcCOdiCq_C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe class="video_youtube" width="560" height="315" src="https://www.youtube.com/embed/9tlG7RxLHlk?si=5BHtsOWjaOCwHYj_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                     </li>
                     <li class="card">
-                      <h1 class="text">Bem-vindos ao Mundo dos Materias!     
-                    <p class="text" id="text-1"> Olá, queridos alunos do 1º ano do Ensino Fundamental! Sejam muito bem-vindos a uma jornada curiosa, vamos brincar de detetive e descobrir sobre os materiais que fazem parte do nosso mundo, também vamos estudar e aprender sobre a Reciclagem e cuidar melhor do nosso planeta!  </p>
+                      <h1 class="text">Bem-vindos ao Mundo das Letras e dos Sons!     
+                    <p class="text" id="text-1"> Olá, queridos alunos do 1º ano do Ensino Fundamental! Sejam muito bem-vindos a uma jornada emocionante: o mundo mágico da alfabetização! Aqui, vamos embarcar juntos em uma aventura cheia de descobertas, onde vamos explorar as letras, os sons e as palavras que nos rodeiam. </p>
                     <button class="speak-all" onclick="speak('text-1')" style="margin-right: 1em;"><span class="material-symbols-outlined">volume_up</span></button>
                     </li>
                     <li class="card">
-                      <h1 class="text">O Que é a Reciclagem?    
-                    <p class="text" id="text-1">Reciclagem é como dar uma nova vida a coisas que já usamos. É o processo de transformar materiais antigos em algo novinho em folha, como se fosse mágica! Imagine uma latinha ou uma garrafa se tornando uma nova peça de brinquedo ou um material de escola. Cada pedacinho de plástico, papel e metal que reciclamos ajuda a cuidar do nosso planeta, como se estivéssemos montando um grande quebra-cabeça da natureza, onde cada peça reciclada faz o mundo brilhar um pouquinho mais!</p>      
+                      <h1 class="text">O Que é Alfabetização?    
+                    <p class="text" id="text-1">Alfabetização é como abrir uma porta para um mundo cheio de conhecimento e magia. É o processo de aprender a ler e escrever, de decifrar os segredos das letras e entender como elas se unem para formar palavras. É como desvendar um quebra-cabeça emocionante, onde cada pedacinho é uma letra e cada letra nos conta uma história.      
                     <button class="speak-all" onclick="speak('text-2')" style="margin-right: 1em;"><span class="material-symbols-outlined">volume_up</span></button>
                     </li>
                     <li class="card">
-                      <h1 class="text">O Que acontece com os materiais do mundo?    
-                    <p class="text" id="text-1">Quando usamos algo, como uma casca de banana ou um pedaço de papel, ele não desaparece magicamente quando jogamos fora. Na verdade, esses materiais continuam no nosso planeta e passam por um processo chamado decomposição!, com a ajuda de pequenos seres chamados bactérias e fungos, que trabalham juntos para transformar aquilo em pedacinhos bem pequenininhos. Alguns materiais, como frutas e folhas, se decompõem rapidinho. Mas outros, como plásticos e metais, demoram muitos e muitos anos para se decompor.</p>
+                      <h1 class="text">As Letrinhas Mágicas    
+                    <p class="text" id="text-1">No mundo da alfabetização, as letras são como pequenos tesouros esperando para serem descobertos. Cada uma delas tem o seu próprio som, a sua própria personalidade. Juntas, elas formam as palavras que encontramos nos livros, nas placas da rua, nos rótulos dos alimentos e em tantos outros lugares! 
                     <button class="speak-all" onclick="speak('text-2')" style="margin-right: 1em;"><span class="material-symbols-outlined">volume_up</span></button>
                     </li>
-                    <li class="card">
-                        <p class="text" id="text-3">Você já viu aqueles símbolos especiais nos produtos e nas embalagens? Eles parecem setas formando um triângulo e têm um nome importante: são os símbolos da reciclagem! Esses símbolos nos ajudam a entender como cada material pode voltar para o ciclo de uso e se transformar em algo novo. </p>
+                        <li class="card">
+                        <p class="text" id="text-3">Alfabeto: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z </p>
                         <button class="speak-all" onclick="speak('text-3')" style="margin-right: 1em;"><span class="material-symbols-outlined">volume_up</span></button>
-                        </li>
+                    </li>
                 </ul>
                 <i id="right" class="fa-solid fa-angle-right">></i>
             </div>
@@ -60,44 +78,52 @@
         <div class="aula hidden" id="att2">
             <div class="titulo-Aula text"><h1>Atividade 1</h1></div>
             <div class="tarefa">
-                <div class="tituloAtt text"><h1>Qual objeto é Reciclável</h1></div>
-                <div class="descAtt text"><p>Encontre quais objetos são recicláveis e quais não.</p></div>
+                <div class="tituloAtt text"><h1>Qual é a Letra?</h1></div>
+                <div class="descAtt text"><p>Complete as letras que faltam no nome de cada objeto</p></div>
                 <section class="blocos">
                     <div class="grupo-bloco">
-                        <div class="hidden" id="repostaHiden1">Garrafa-Pet</div>
-                        <img src="../imgs/g_pet.png" alt="Flor pequena de petálas azuis.">
+                        <div class="hidden" id="repostaHiden1">Flor</div>
+                        <img src="../imgs/alpine-nao-me-esqueca 2.png" alt="Flor pequena de petálas azuis.">
                         <div class="bloco resposta" id="resposta1"></div>
-                        
+                        <div class="bloco ">L</div>
+                        <div class="bloco">O</div>
+                        <div class="bloco">R</div>
                         <button class="speak-all" onclick="speak('repostaHiden1')" style="margin-right: 1em;"><span class="material-symbols-outlined">volume_up</span></button>
                     </div>
                     <div class="grupo-bloco">
-                    <div class="hidden" id="repostaHiden2">Latinha</div>
-                        <img src="../imgs/latinha.png" alt="Bolo de aniversáio com cobertura rosa e três velas em cima.">
+                    <div class="hidden" id="repostaHiden2">Bolo</div>
+                        <img src="../imgs/bolo-de-aniversario 3.png" alt="Bolo de aniversáio com cobertura rosa e três velas em cima.">
                         <div class="bloco resposta" id="resposta2" ></div>
-                        
+                        <div class="bloco">O</div>
+                        <div class="bloco">L</div>
+                        <div class="bloco">O</div>
                         <button class="speak-all" onclick="speak('repostaHiden2')" style="margin-right: 1em;"><span class="material-symbols-outlined">volume_up</span></button>
                     </div>
                     <div class="grupo-bloco">
-                    <div class="hidden" id="repostaHiden3">Livros</div>
-                        <img src="../imgs/livro_C.png" alt="Bota de couro com fivela dourada.">
+                    <div class="hidden" id="repostaHiden3">Bota</div>
+                        <img src="../imgs/bota 2.png" alt="Bota de couro com fivela dourada.">
                         <div class="bloco resposta" id="resposta3"></div>
-                        
+                        <div class="bloco">O</div>
+                        <div class="bloco">T</div>
+                        <div class="bloco">A</div>
                         <button class="speak-all" onclick="speak('repostaHiden3')" style="margin-right: 1em;"><span class="material-symbols-outlined">volume_up</span></button>
                     </div>
                     <div class="grupo-bloco">
-                    <div class="hidden" id="repostaHiden4">Canudo</div>
-                        <img src="../imgs/canudo.png" alt="Dado de 6 lados em preto e branco.">
+                    <div class="hidden" id="repostaHiden4">Dado</div>
+                        <img src="../imgs/contorno-do-cubo-de-dados 2.png" alt="Dado de 6 lados em preto e branco.">
                         <div class="bloco resposta" id="resposta4"></div>
-                        
+                        <div class="bloco">A</div>
+                        <div class="bloco">D</div>
+                        <div class="bloco">O</div>
                         <button class="speak-all" onclick="speak('repostaHiden4')" style="margin-right: 1em;"><span class="material-symbols-outlined">volume_up</span></button>
                     </div>
                 </section>
                 <section class="respostas">
 
-                    <button class="bloco letra-resposta recic" draggable="true" ><img  src="../imgs\recic.png" alt="Ìcone de reciclagem."><p>A</p></button>
-                    <button class="bloco letra-resposta recic" draggable="true" ><img  src="../imgs\recic.png" alt="Ìcone de reciclagem."><p>A</p></button>
-                    <button class="bloco letra-resposta recic" draggable="true" ><img  src="../imgs\recic.png" alt="Ìcone de reciclagem."><p>A</p></button>
-                    <button class="bloco letra-resposta recic" draggable="true" ><img  src="../imgs/n_recic.png"><p>B</p></button>
+                    <button class="bloco letra-resposta" draggable="true" >B</button>
+                    <button class="bloco letra-resposta" draggable="true" >D</button>
+                    <button class="bloco letra-resposta" draggable="true" >F</button>
+                    <button class="bloco letra-resposta" draggable="true" >B</button>
                 </section>
                 
             </div>
@@ -110,17 +136,17 @@
         <div class="aula hidden" id="att3">
             <div class="titulo-Aula text"><h1>Atividade 2</h1></div>
             <div class="tarefa">
-                <div class="tituloAtt text"><h1>Qual é Natural ou Artificial?</h1></div>
-                <div class="descAtt text"><p style="display: flex; align-items: center; justify-content: center;" id="pergunta">Qual elemento é natural?<button class="speak-all" onclick="speak('pergunta')" style="margin-right: 1em;"><span class="material-symbols-outlined">volume_up</span></button></p> </div>
+                <div class="tituloAtt text"><h1>Qual é a Letra?</h1></div>
+                <div class="descAtt text"><p style="display: flex; align-items: center; justify-content: center;" id="pergunta">Qual letrinha vem antes da letra: G no alfabeto?<button class="speak-all" onclick="speak('pergunta')" style="margin-right: 1em;"><span class="material-symbols-outlined">volume_up</span></button></p> </div>
                 <section class="blocos">
 
                 </section>
                 <section class="respostas">
 
-                    <button class="bloco letra-resposta hover-letra recic" id="att2-res-1" onclick="selecionarResp('att2-res-1')"><img src="../imgs\vidro.png" alt="Cacos de vidro"></button>
-                    <button class="bloco letra-resposta hover-letra recic" id="att2-res-2" onclick="selecionarResp('att2-res-2')"><img src="../imgs\plastico.png" alt="Utensilíos de plástico"></button>
-                    <button class="bloco letra-resposta hover-letra recic"  id="att2-res-3"onclick="selecionarResp('att2-res-3')"><img src="../imgs\madeira.png" alt="Uma tora de madeira"></button>
-
+                    <button class="bloco letra-resposta hover-letra" id="att2-res-1" onclick="selecionarResp('att2-res-1')">B</button>
+                    <button class="bloco letra-resposta hover-letra" id="att2-res-2" onclick="selecionarResp('att2-res-2')">D</button>
+                    <button class="bloco letra-resposta hover-letra"  id="att2-res-3"onclick="selecionarResp('att2-res-3')">F</button>
+                    <button class="bloco letra-resposta hover-letra" id="att2-res-4" onclick="selecionarResp('att2-res-4')">B</button>
                 </section>
 
             </div>
@@ -132,40 +158,20 @@
         <div class="aula hidden" id="att4">
             <div class="titulo-Aula text"><h1>Atividade 3</h1></div>
                 <div class="tarefa">
-                    <div class="tituloAtt text"><h1>Decomposição</h1></div>
-                    <div class="descAtt text"><p style="display: flex; align-items: center; justify-content: center;" id="pergunta">Quanto tempo demora para esses materias se decomporem?<button class="speak-all" onclick="speak('pergunta')" style="margin-right: 1em;"><span class="material-symbols-outlined">volume_up</span></button></p> </div>
+                    <div class="tituloAtt text"><h1>Qual é a Letra?</h1></div>
+                    <div class="descAtt text"><p style="display: flex; align-items: center; justify-content: center;" id="pergunta">Qual letrinha vem depois da letra: R no alfabeto?<button class="speak-all" onclick="speak('pergunta')" style="margin-right: 1em;"><span class="material-symbols-outlined">volume_up</span></button></p> </div>
                     <section class="blocos">
-                    <div class="grupo-bloco">
-                        <div class="hidden" id="repostaHiden10">Papel</div>
-                        <img src="../imgs/papel.png" alt="Flor pequena de petálas azuis.">
-                        <div class="bloco resposta" id="resposta10"></div>
-                        
-                        <button class="speak-all" onclick="speak('repostaHiden10')" style="margin-right: 1em;"><span class="material-symbols-outlined">volume_up</span></button>
-                    </div>
-                    <div class="grupo-bloco">
-                    <div class="hidden" id="repostaHiden11">Bolo</div>
-                        <img src="../imgs\bolo-de-aniversario.png" alt="Bolo de aniversáio com cobertura rosa e três velas em cima.">
-                        <div class="bloco resposta" id="resposta11" ></div>
-                        
-                        <button class="speak-all" onclick="speak('repostaHiden11')" style="margin-right: 1em;"><span class="material-symbols-outlined">volume_up</span></button>
-                    </div>
-                    <div class="grupo-bloco">
-                    <div class="hidden" id="repostaHiden12">Plástico</div>
-                        <img src="../imgs/plastico.png" alt="Bota de couro com fivela dourada.">
-                        <div class="bloco resposta" id="resposta12"></div>
-                        
-                        <button class="speak-all" onclick="speak('repostaHiden12')" style="margin-right: 1em;"><span class="material-symbols-outlined">volume_up</span></button>
-                    </div>
-                </section>
-                <section class="respostas">
 
-                    <button class="bloco letra-resposta recic" draggable="true" ><h1>3 meses</h1></button>
-                    <button class="bloco letra-resposta recic" draggable="true" ><h1>1 mês</h1></button>
-                    <button class="bloco letra-resposta recic" draggable="true" ><h1>400 anos</h1></button>
+                    </section>
+                    <section class="respostas">
 
-                </section>
-                
-            </div>
+                        <button class="bloco letra-resposta hover-letra" id="att3-res-1" onclick="selecionarResp('att3-res-1')">Q</button>
+                        <button class="bloco letra-resposta hover-letra" id="att3-res-2" onclick="selecionarResp('att3-res-2')">H</button>
+                        <button class="bloco letra-resposta hover-letra" id="att3-res-3" onclick="selecionarResp('att3-res-3')">C</button>
+                        <button class="bloco letra-resposta hover-letra" id="att3-res-4" onclick="selecionarResp('att3-res-4')">S</button>
+                    </section>
+
+                </div>
                 <div class="conc">
                     <button class="btn-conc btn-att4" id="" onclick="correcao('att4')">Concluido</button>
                 </div>
@@ -208,11 +214,14 @@
                 <button class="btn-conc hidden reinicia" id="" onclick="Reiniciar()">Refazer</button>
     </div> 
     <form id="FormAttPT">
-        <input type="hidden" name="materia" id="materia" value="Ciências">
+        <input type="hidden" name="materia" id="materia" value="Português">
         <input type="hidden" name="pontos" id="pontos" value="50">
         <input type="hidden" name="atividade" id="atividade" value=1>                  
     </form>
+    
+   
     <script>
+       
         function attAtividade(materia){
   $.ajax({
     type: 'post',
@@ -245,10 +254,10 @@
   
   }) 
 }
-        attAtividade('Ciências')
+        attAtividade('Português')
     </script>
-    <script src="../js/atividades_ciencias.js"></script>
-    
+     <script src="../js/atividades.js"></script>
+
     <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script>
     <script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'></script>
     <div vw class="enabled"><div vw-access-button class="active"></div><div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div></div><script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script><script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>

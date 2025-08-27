@@ -1,7 +1,7 @@
 
 <?php 
         $hostname = "localhost";
-        $bancodedados = "if0_39642998_munduca_bd";
+        $bancodedados = "munduca_bd";
         $usuario = "sql304.infinityfree.com";
         $senha = "RCrjRbgkswJJJW";
 

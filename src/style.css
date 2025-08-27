@@ -13,6 +13,13 @@
 
 /*Responsividade baseada nas telas dos dispositivos laptop: 1024px, tablet: 768px, mobileL: 425px, mobileM: 375px, mobileS: 320px*/
 
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
 body::-webkit-scrollbar {
     width: 6px;  
     height: 6px;             
@@ -47,7 +54,7 @@ body::-webkit-scrollbar {
     h1.text{
         font-size: 1.6em;
         line-height: normal;
-        width: 99vw;
+        width: 100%;
     }
     p.frase{
         font-size: 10em;
@@ -167,15 +174,15 @@ body::-webkit-scrollbar {
   
 @media screen and (max-width: 425px) {
     h1.text{
-        font-size: 1.2em;
+        font-size: 1.7em;
 
     }
     p.frase{
-        font-size: 1.6em;
+        font-size: 2em;
         margin-right: 1%;
     }
     p.text-div2{
-        font-size: 1.3em;
+        font-size: 1.5em;
     }
     div.container img.img_materias{
         padding-left: 2%;
@@ -220,14 +227,19 @@ body::-webkit-scrollbar {
         text-align: center;
     }
     div.container{
-        display: block;
+        display: block !important;
+        height: auto !important;
+    }
+    div.containerr{
+        display: block !important;
+        text-align: center;
     }
     div.container img.img_materias{
-       margin-left: 30%;
        margin-top: 10%;
        margin-bottom: 15%;
         width: 7rem;
         height: 10rem;
+        padding: 0;
     }
     div.container button.text{
         font-size: 1.3em;
@@ -242,9 +254,60 @@ body::-webkit-scrollbar {
     div.waves{
         padding-top: 30%;
     }
-
+    .img_materias{
+        width: 50% !important;
+       margin: 0 auto;
+    }
+    .texto-div2{
+        width: 100% !important;
+        
+    }
+    .size-16 {
+        width: 4rem !important;
+        height: 4rem !important;
+    }
+    .div-3 div{
+        display: block !important;
+        text-align: center;
+        height: auto !important;
+        margin-bottom: 4rem;
+    }
+    .div-2{
+        display: none !important;
+        
+    }
+    .div-3{
+        height: auto !important;
+        
+    }
+    .img-div img{
+        margin: 0 auto;
+    }
+    .cont-text2{
+        margin: 0 auto;
+    }
+    .foot{
+        height: auto !important;
+    }
+    a img{
+        width: 4rem !important;
+        height: 4rem !important;
+    }
+    .login{
+        display: block;
+    }
+    .caixa{
+        text-align: center;
+    }
+    .caixa input{
+        margin-left: 1rem !important;
+    }
+    .caixa h1{
+        padding-left: 0 !important;
+    }
 }
 @media screen and (max-width: 320px) {
+    
     h1.text{
         font-size: 0.9em;
 

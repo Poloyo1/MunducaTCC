@@ -39,7 +39,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
 <script src="core/locales-all.global.min.js"></script>
 <nav class="navbar">
         <div class=" flex justify-between px-7 ">
-            <a href="HubHome.php">
+            <a href="HubHome.php" class="logoHub">
             <img class="size-16" src="imgs/Logo Munduca.png" alt="Logo Munduca" style="width: 130px; height: 120px;"></a>
             <div class="flex items-center">
             <button class="mr-5 text link" style="margin-left: 0.5em; margin-right: 1em;">Pontos: <?php echo  $result['pontos']; ?> </button>
@@ -71,16 +71,17 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
   var calendarEl = document.getElementById('calendar');
   var calendar = new FullCalendar.Calendar(calendarEl, {
       headerToolbar: {
-          left: 'prev,next today',
-          center: 'title',
-          right: 'dayGridMonth,timeGridWeek,timeGridDay'
+          left: 'prev,next',
+          right: "title"
       },
-      navLinks: true, // can click day/week names to navigate views
+      navLinks: window.innerWidth < 768 ? 'false' : true, // can click day/week names to navigate views
       selectable: true,
       selectMirror: true,
-      initialView: 'dayGridMonth',
+      initialView: window.innerWidth < 768 ? 'dayGridMonth' :'dayGridMonth',
       locale: 'pr-br',
-      select: function(startdt){
+      contentHeight: 'auto',
+    aspectRatio: 1.35,
+      dateClick: function(startdt){
         console.log(startdt);
         start = startdt.startStr;
         console.log(start);

@@ -10,7 +10,7 @@ function speak(id){
 
 function enviar(pagina){
 
-  window.location.href = "https://munduca.page.gd/"+pagina
+  window.location.href = pagina //"https://munduca.page.gd/"+
 
 }
 
@@ -201,58 +201,59 @@ function adicionarEvent(materia){
     success: function(){
       
       var calendarEl = document.getElementById('calendar');
-      var calendar = new FullCalendar.Calendar(calendarEl, {
-        headerToolbar: {
-            left: 'prev,next today',
-            center: 'title',
-            right: 'dayGridMonth,timeGridWeek,timeGridDay'
-        },
-        navLinks: true, // can click day/week names to navigate views
-        selectable: true,
-        selectMirror: true,
-        initialView: 'dayGridMonth',
-        locale: 'pr-br',
-        select: function(startdt){
-          console.log('ta fun');
-          start = startdt.startStr;
-          var inputDataStart = document.querySelectorAll('.start')
-          for (var i = 0; i < inputDataStart.length; i++) {
-            inputDataStart[i].value = start;
-       }
-          modal.style.display = "block";
-          calendar.unselect()
-  
-        },
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+      headerToolbar: {
+          left: 'prev,next',
+          right: "title"
+      },
+      navLinks: window.innerWidth < 768 ? 'false' : true, // can click day/week names to navigate views
+      selectable: true,
+      selectMirror: true,
+      initialView: window.innerWidth < 768 ? 'dayGridMonth' :'dayGridMonth',
+      locale: 'pr-br',
+      contentHeight: 'auto',
+    aspectRatio: 1.35,
+      dateClick: function(startdt){
+        console.log(startdt);
+        start = startdt.startStr;
+        console.log(start);
+        var inputDataStart = document.querySelectorAll('.start')
+      for (var i = 0; i < inputDataStart.length; i++) {
+        inputDataStart[i].value = start;
+   }
+        modal.style.display = "block";
+        calendar.unselect()
 
-        eventClick: function(info) {
-          const eventDate = info.event.start;
-      
-      // Formata a data no formato yyyy-mm-dd
-      const formattedDate = eventDate.toISOString().split('T')[0];
-  
-      console.log(formattedDate); 
-  
-          $.ajax({
-              type: 'post',
-          
-              url: 'php/removeEvent.php',
-  
-              data: {
-                  start: formattedDate        
-              },
-              success: function(data){
-                  calendar.refetchEvents();
-              },
-              
-              error: function(){
-          
-              }
-          
-          }) 
-          },
-       events: 'php/capturarEventos.php'
-     });
-  calendar.render();
+      },
+      eventClick: function(info) {
+        const eventDate = info.event.start;
+    
+    // Formata a data no formato yyyy-mm-dd
+    const formattedDate = eventDate.toISOString().split('T')[0];
+
+    console.log(formattedDate); 
+
+        $.ajax({
+            type: 'post',
+        
+            url: 'php/removeEvent.php',
+
+            data: {
+                start: formattedDate        
+            },
+            success: function(data){
+                calendar.refetchEvents();
+            },
+            
+            error: function(){
+        
+            }
+        
+        }) 
+        },
+     events: 'php/capturarEventos.php'
+   });
+calendar.render();
   modal.style.display = "none";
     },
     

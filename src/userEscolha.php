@@ -128,7 +128,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
                     success: function(data){
                         const falha =document.getElementById('falha')
                         if(data == 1){
-                            enviar('hubHome.php')
+                            enviar('HubHome.php')
                         }else{
                             falha.innerText = data;
                             console.log(data)

@@ -212,6 +212,109 @@ body::-webkit-scrollbar {
     div.texto-recentes h1.disciplinasR{
           font-size: 0.7em;  
     }
+        .img_materias{
+        width: 50% !important;
+       margin: 0 auto;
+    }
+    .texto-div2{
+        width: 100% !important;
+        
+    }
+    .size-16 {
+        width: 4rem !important;
+        height: 4rem !important;
+    }
+    .div-3 div{
+        display: block !important;
+        text-align: center;
+        height: auto !important;
+        margin-bottom: 4rem;
+    }
+    .div-2{
+        display: none !important;
+        
+    }
+    .div-3{
+        height: auto !important;
+        
+    }
+    .img-div img{
+        margin: 0 auto;
+    }
+    .cont-text2{
+        margin: 0 auto;
+    }
+    .foot{
+        height: auto !important;
+    }
+    a img{
+        width: 4rem !important;
+        height: 4rem !important;
+    }
+    .login{
+        display: block;
+    }
+    .caixa{
+        text-align: center;
+    }
+    .caixa input{
+        margin-left: 1rem !important;
+    }
+    .caixa h1{
+        padding-left: 0 !important;
+    }
+    .foto_perfil{
+        display: none;
+    }
+    .size-8{
+        width: 2rem !important;
+        height: 2rem !important;
+    }
+    .btnAreaAluno{
+        width: 7em !important;
+    }
+    .logoHub{
+        display: none;
+    }
+    .navbar{
+        padding: 1rem;
+    }
+    .text-ar{
+        padding: 0 !important;
+    }
+    .titu{
+        text-align: center;
+    }
+    .estatisticas{
+        margin: 0 auto !important;
+    }
+    #calendar{
+        margin: 0 auto !important;
+        padding: 0.5rem !important;
+    }
+    .divExibir{
+        width: auto !important;
+    }
+    .modal-content{
+        position: unset !important;
+        width: 100% !important;
+    }
+    .janela-modal{
+        padding: 0 !important;
+    }
+    .wrap{
+        flex-wrap: unset !important;
+        justify-content: start !important;
+        overflow: scroll;
+    }
+    .modal-body{
+        padding: 2px 0rem !important;
+        overflow-x: hidden;
+        max-height: 700px;
+    }
+    .resumo{
+        overflow: scroll;
+    }
   }    
 @media screen and (max-width: 375px) {
     h1.text{
@@ -305,6 +408,39 @@ body::-webkit-scrollbar {
     .caixa h1{
         padding-left: 0 !important;
     }
+    .foto_perfil{
+        display: none;
+    }
+    .size-8{
+        width: 2rem !important;
+        height: 2rem !important;
+    }
+    .btnAreaAluno{
+        width: 7em !important;
+    }
+    .logoHub{
+        display: none;
+    }
+    .navbar{
+        padding: 1rem;
+    }
+    .text-ar{
+        padding: 0 !important;
+    }
+    .titu{
+        text-align: center;
+    }
+    .estatisticas{
+        margin: 0 auto !important;
+    }
+    #calendar{
+        margin: 0 auto !important;
+        padding: 0.5rem !important;
+    }
+    .divExibir{
+        width: auto !important;
+    }
+
 }
 @media screen and (max-width: 320px) {
     
